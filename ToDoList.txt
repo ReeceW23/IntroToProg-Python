@@ -1,0 +1,16 @@
+dishes,mid
+Mow,High
+Shop,Low
+Mow,High
+Mow,High
+Mow,High
+Clean,High
+Mow,High
+Mow,High
+SHop,Low
+Mow,High
+Mow,High
+Mow,High
+Mow,
+Mow,High
+Clean,Mid
