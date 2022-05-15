@@ -23,6 +23,12 @@ strChoice = "" # A Capture the user option selection
 # Step 1 - When the program starts, load the any data you have
 # in a text file called ToDoList.txt into a python list of dictionaries rows (like Lab 5-2)
 # TODO: Add Code Here
+objFile = open("ToDoList.txt", 'a')
+dicRow = {'Task': 'Mow', 'Priority': 'High'}
+objFile.write(dicRow["Task"] + ',' + dicRow["Priority"] + '\n')
+lstTable = [dicRow]
+objFile.close()
+
 
 # -- Input/Output -- #
 # Step 2 - Display a menu of choices to the user
@@ -66,7 +72,7 @@ while (True):
         continue
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
-        objFile = open("ToDoList.txt", "w")
+        objFile = open("ToDoList.txt", "a")
         for row in lstTable:
             objFile.write(str(row["Task"]) + ',' + str(row["Priority"]) + '\n')
             objFile.close()
@@ -76,3 +82,6 @@ while (True):
     elif (strChoice.strip() == '5'):
         print("You Have Exited the Program")
         break  # and Exit the program
+    else:
+        print("Please only enter 1, 2, 3, 4, or 5")
+
