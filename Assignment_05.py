@@ -74,10 +74,9 @@ while (True):
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
         objFile = open("ToDoList.txt", "a")
-        for row in lstTable:
-            objFile.write(strData + ',' + strPri + '\n')
-            objFile.close()
-            print("Now in File!")
+        objFile.write(strData + ',' + strPri + '\n')
+        objFile.close()
+        print("Now in File!")
         continue
     # Step 7 - Exit program
     elif (strChoice.strip() == '5'):
