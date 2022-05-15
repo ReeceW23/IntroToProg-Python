@@ -17,6 +17,7 @@ dicRow = {}    # A row of data separated into elements of a dictionary {Task,Pri
 lstTable = []  # A list that acts as a 'table' of rows
 strMenu = ""   # A menu of user options
 strChoice = "" # A Capture the user option selection
+strPri = ""
 
 
 # -- Processing -- #
@@ -74,7 +75,7 @@ while (True):
     elif (strChoice.strip() == '4'):
         objFile = open("ToDoList.txt", "a")
         for row in lstTable:
-            objFile.write(str(row["Task"]) + ',' + str(row["Priority"]) + '\n')
+            objFile.write(strData + ',' + strPri + '\n')
             objFile.close()
             print("Now in File!")
         continue
