@@ -23,11 +23,12 @@ strPri = ""
 # -- Processing -- #
 # Step 1 - When the program starts, load the any data you have
 # in a text file called ToDoList.txt into a python list of dictionaries rows (like Lab 5-2)
-# TODO: Add Code Here
-objFile = open("ToDoList.txt", 'a')
-dicRow = {'Task': 'Mow', 'Priority': 'High'}
-objFile.write(dicRow["Task"] + ',' + dicRow["Priority"] + '\n')
-lstTable = [dicRow]
+# TODO: Add Code Here gh
+objFile = open("ToDoList.txt", "r")
+for row in objFile:
+    lstTable = row.split(",")
+    print(lstTable)
+    print(lstTable[0] + '|' + lstTable[1].strip())
 objFile.close()
 
 
